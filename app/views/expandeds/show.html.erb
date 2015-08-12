@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @expanded.identifier %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @expanded.content %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @expanded.position %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @expanded.parent %>
+</p>
+
+<%= link_to 'Edit', edit_expanded_path(@expanded) %> |
+<%= link_to 'Back', expandeds_path %>

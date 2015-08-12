@@ -1,0 +1,32 @@
+<% @steam.each do |chapter| %>
+  <a class="level1" data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+    <%= chapter.content %>       
+  </a>                 
+  <% for sub1 in chapter.sub_chapters %>
+    <div class="collapse" id="collapse1">
+    <a class="level2" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+      <%=sub1.content %>
+    </a>
+    <% for cont in sub1.contents %>   
+      <div class="collapse" id="collapse2">
+        <a class="level1" data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3">                                       
+          <%=cont.content %>
+        </a>
+      <% for exp in cont.sub_contents %>
+        <div class="collapse" id="collapse3">
+          <a class="level1" data-toggle="collapse" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            <%= exp.contenty %>
+          </a>
+        <% for lol in exp.expandeds %> 
+          <div class="collapse" id="collapse4">
+            <%= lol.content %>
+          </div>                                                  
+        <% end %>
+        </div>
+      <% end %>
+      </div>  
+    <% end %>
+    </div>    
+  <% end %>
+  </div>   
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @sub_content.identifier %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @sub_content.content %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @sub_content.position %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @sub_content.parent %>
+</p>
+
+<%= link_to 'Edit', edit_sub_content_path(@sub_content) %> |
+<%= link_to 'Back', sub_contents_path %>

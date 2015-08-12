@@ -1,0 +1,53 @@
+<table>
+  <thead>
+    <tr>
+      <th>Chapter</th>
+      <th>SubChapter</th>
+      <th>Content</th>
+      <th>SubContent</th>
+      <th>Expanded</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @steam.each do |chapter| %>
+<tr>
+  <td>
+    <%= chapter.content %>
+  </td>
+  <td>
+    <% for sub in chapter.sub_chapters %>
+    <%= sub.content %><br>
+    <% end %>
+  </td>
+  <td>
+    <% for sub in chapter.sub_chapters %>
+    <% for cont in sub.contents %>
+    <%= cont.content %><br>
+    <% end %>
+    <% end %>
+  </td>
+  <td>
+    <% for sub in chapter.sub_chapters %>
+    <% for cont in sub.contents %>
+    <% for exp in cont.sub_contents %>
+    <%= exp.contenty %><br>
+    <% end %>
+    <% end %>
+    <% end %>
+  </td>
+
+  <td>
+    <% for sub in chapter.sub_chapters %>
+    <% for cont in sub.contents %>
+    <% for exp in cont.sub_contents %>
+    <% for lol in exp.expandeds %>
+    <%= lol.content %><br>
+    <% end %>
+    <% end %>
+    <% end %>
+    <% end %>
+  </td>
+</tr>
+<% end %>
+</tbody>
+</table>
