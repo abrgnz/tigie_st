@@ -1,6 +1,6 @@
 == TIGIE_crawler APP (Tarifa de ley de impuestos generales de importaciñon y exportación) 
 
-Simple Rails APP to crawl http://www.siicex-caaarem.org.mx/ and extract all its data to a relational sql database.
+Simple Rails APP to crawl http://www.siicex-caaarem.org.mx/ and extract all its data into a relational sql database.
 
 
 Usage:
